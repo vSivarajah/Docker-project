@@ -1,1 +1,6 @@
-<paste log output from Kubernetes-mediated prediction, here>
+❯ ./run_kubernetes.sh
+Error from server (AlreadyExists): error when creating "deployment.yaml": deployments.apps "houseprediction" already exists
+NAME                               READY   STATUS    RESTARTS   AGE
+houseprediction-6db5f5cbfc-6sw4f   1/1     Running   0          6s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80

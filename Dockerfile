@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . /app/
 
+# hadolint ignore=DL3013
+
 RUN pip install pip==20.1.1 && \
     pip install --trusted-host pypi.python.org  -r requirements.txt
 
