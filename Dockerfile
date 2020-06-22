@@ -4,12 +4,12 @@ WORKDIR /app
 
 COPY . /app/
 
-RUN pip install -r requirements.txt
+RUN pip install pip==20.1.1 && \
+    pip install --trusted-host pypi.python.org  -r requirements.txt
 
-# hadolint ignore=DL3013
 
 ## Step 4:
 EXPOSE 80
 
 ## Step 5:
-CMD ["python3.7", "app.py"]
+CMD ["python", "app.py"]
