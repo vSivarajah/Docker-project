@@ -1,4 +1,5 @@
-<include a CircleCI status badge, here>
+[![vSivarajah](https://circleci.com/gh/vSivarajah/Docker-project.svg?style=svg)](<LINK>)
+
 
 ## Project Overview
 
