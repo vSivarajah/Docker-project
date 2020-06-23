@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: houseprediction
+  name: houseprediction
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: houseprediction
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: houseprediction
+    spec:
+      containers:
+      - image: vigneshsivarajah/ml_microservice:latest
+        name: houseprediction-microservice
+        resources: {}
+status: {}
