@@ -9,4 +9,4 @@ docker build --tag=vigneshsivarajah/ml_microservice .
 # List docker images
 docker image ls 
 # Step 3: 
-docker run -p 80:80 ml_microservice
+docker run -p 8000:80 vigneshsivarajah/ml_microservice
