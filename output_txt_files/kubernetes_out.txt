@@ -1,6 +1,43 @@
-❯ ./run_kubernetes.sh
-Error from server (AlreadyExists): error when creating "deployment.yaml": deployments.apps "houseprediction" already exists
-NAME                               READY   STATUS    RESTARTS   AGE
-houseprediction-6db5f5cbfc-6sw4f   1/1     Running   0          6s
-Forwarding from 127.0.0.1:8000 -> 80
-Forwarding from [::1]:8000 -> 80
+ kubectl logs houseprediction-6db5f5cbfc-ljnps
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 231-779-307
+[2020-06-23 18:23:52,815] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-06-23 18:23:52,828] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-06-23 18:23:52,837] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-06-23 18:23:52,840] INFO in app: Output prediction value: 
+[20.35373177134412]
+127.0.0.1 - - [23/Jun/2020 18:23:52] "POST /predict HTTP/1.1" 200 -
+[2020-06-23 18:23:57,538] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-06-23 18:23:57,552] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-06-23 18:23:57,563] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-06-23 18:23:57,566] INFO in app: Output prediction value: 
+[20.35373177134412]
+127.0.0.1 - - [23/Jun/2020 18:23:57] "POST /predict HTTP/1.1" 200 -
+[2020-06-23 18:23:59,318] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-06-23 18:23:59,332] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-06-23 18:23:59,344] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-06-23 18:23:59,349] INFO in app: Output prediction value: 
+[20.35373177134412]
+127.0.0.1 - - [23/Jun/2020 18:23:59] "POST /predict HTTP/1.1" 200 -
